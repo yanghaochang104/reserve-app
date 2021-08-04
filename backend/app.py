@@ -17,7 +17,61 @@ def create_app(test_config=None):
         response.headers.add('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS')
         return response
     
+    '''
+    sign up as a new member
+    '''
+    @app.route('/register', methods=['POST'])
+    def sign_up():
+        pass
+    
+    '''
+    varify current member and enter member page
+    '''
+    @app.route('/members/<int:member_id>', methods=['GET'])
+    # @requires_auth('get:member_id')
+    def enter_member_page(member_id):
+        pass
+
+
+    '''
+    make reservation
+    '''
+    @app.route('/members/<int:member_id>/reservation', methods=['POST'])
+    def make_reservation():
+        pass
     
     
-    return app    
+    '''
+    get reservation records
+    '''
+    app.route('/members/<int:member_id>/records', methods=['GET'])
+    def get_all_records():
+        pass
     
+    
+    '''
+    check specific reservation record
+    '''
+    @app.route('/members/<int:member_id>/records/<int:records_id>', methods=['GET'])
+    def get_record(records_id):
+        pass
+    
+    
+    '''
+    update specific reservation record
+    '''
+    @app.route('/members/<int:member_id>/records/<int:records_id>', methods=['PUT'])
+    def update_record(records_id):
+        pass
+    
+    
+    '''
+    delete specific reseration record
+    '''
+    @app.route('/members/<int:member_id>/records/<int:records_id>', methods=['DELETE'])
+    def delete_record(records_id):
+        pass
+    
+    return app  
+
+  
