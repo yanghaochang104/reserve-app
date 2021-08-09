@@ -1,8 +1,8 @@
 import React from 'react';
 
-interface MemberHeaderProps {}
+interface Props {}
 
-const MemberHeader = (props: MemberHeaderProps): JSX.Element=> {
+const MemberHeader = (props: Props): JSX.Element=> {
     return <h1>This is Header shown above MemberView</h1>
 }
 

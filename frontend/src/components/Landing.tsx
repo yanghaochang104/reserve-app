@@ -8,27 +8,32 @@ const Landing = (props: LandingProps): JSX.Element => {
   const history = useHistory();
 
   const goToMemberPage = () => {
-      history.push('/member/123')
+    history.push('/member/123');
+  };
+
+  const goToSignUpPage = () => {
+    history.push('/register');
   };
   return (
     <div>
       <div>
         <h1>Welcome to Vaccine Registration Center!</h1>
       </div>
-      <div className="flex-container">
-        <img src="vaccine.jpg" alt="vaccine.jpg" className="img" />
+      <div className='flex-container'>
+        <img src='vaccine.jpg' alt='vaccine.jpg' className='img' />
       </div>
       <div>
         <button
           onClick={() => {
-            alert("login!");
+            alert('login!');
             goToMemberPage();
           }}>
           login
         </button>
         <button
           onClick={() => {
-            alert("logout!");
+            alert('sign up!');
+            goToSignUpPage();
           }}>
           sign up
         </button>

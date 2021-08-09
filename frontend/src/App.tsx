@@ -16,7 +16,7 @@ function App() {
             <Route path="/member/:id" component={MemberView}/>
           </Switch>
         </Router>
-      </header>{" "}
+      </header>
     </div>
   );
 }
